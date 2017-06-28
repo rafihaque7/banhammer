@@ -1,0 +1,41 @@
+For me, Everything prints out in alphabetical order(better in my opinion), while darrell's does not for all words.
+Ex: house ->domy
+
+Mine prints out near the top(in h), while darrell's prints out near the bottom for some reason.
+I have checked, everything indeed prints out just like darrell's program.
+
+
+What does the program do?
+It goes through a filtering process to make the world a better place. For writing specific vulgar words, you will immediately go
+to Jail. For some words, it will suggest a better word to use to save feelings of other people.
+
+How to use the program?
+Type "make" or "make all" to compile the program
+Type "./banhammer <Espernto.txt" to read Esperanto.txt as the input file
+Type "./banhammer" to read from the standard in.
+
+Here are all the flags:
+-s will suppress the letter form the censor, and instead print the statistics that were computed.
+-h size specifies that has table will have size entries(the default will be 10000)
+-f size specifies that the Bloom filter will have size entries (default will be 2^20)
+-m will use the move-to-front rule.
+-b will not use the move-to-front rule (default)
+
+EX. "./banhammer -h 200 <Esperanto.txt"
+
+All the Files
+- aes.c             Darrell provided this file, it essentially deals with encryption for hash functions
+- aes.h             Darrell provided this file, the header stuff for aes.c
+- badspeak.txt      For setting the Dictionary, You can add more words
+- banhammer.c       The main function is here, as well as initializing and printing statements
+- bf.c              Making bloomfilter functions
+- bf.h              The struct for bloomfilter, and declaration of methods
+- hash.c            For hash function, and hashTable functions
+- hash.h            Struct for hashTable, and initialization
+- lex.yy.c          File gets made from typing "flex scanner.l"
+- ll.c              For linked list functions
+- ll.h              Struct of listNode, and initialization
+- Makefile          To compile the program
+- newspeak.txt      Gives the Translations
+- README            (This file)Gives Instructions
+- words.l            For lex.yy.c. This is a flex file. So it will create lex.yy.c
