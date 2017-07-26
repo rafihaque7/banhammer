@@ -3,6 +3,9 @@
 What does the program do?
 It goes through a filtering process to make the world a better place. For writing specific vulgar words, you will immediately go
 to Jail. For some words, it will suggest a better word to use to save feelings of other people.
+- Filters through text files to find bad words. (can be set using badspeak.txt)
+- For some words, the program will offer a better word to use (set using newspeak.txt)
+
 
 How to use the program?
 Type "make" or "make all" to compile the program
@@ -19,8 +22,8 @@ Here are all the flags:
 EX. "./banhammer -h 200 <Esperanto.txt"
 
 All the Files
-- aes.c             Darrell provided this file, it essentially deals with encryption for hash functions
-- aes.h             Darrell provided this file, the header stuff for aes.c
+- aes.c             Essentially deals with encryption for hash functions
+- aes.h             The header stuff for aes.c
 - badspeak.txt      For setting the Dictionary, You can add more words
 - banhammer.c       The main function is here, as well as initializing and printing statements
 - bf.c              Making bloomfilter functions
@@ -31,6 +34,6 @@ All the Files
 - ll.c              For linked list functions
 - ll.h              Struct of listNode, and initialization
 - Makefile          To compile the program
-- newspeak.txt      Gives the Translations
+- newspeak.txt      Translation dictionary(better word to use) You can add words and translations to this list
 - README            (This file)Gives Instructions
 - words.l            For lex.yy.c. This is a flex file. So it will create lex.yy.c
